@@ -4,7 +4,7 @@
 
 ## 地址
 
-<https://jiangoduck.github.io>
+<https://jiang00067.top>
 
 ## 本地开发
 
