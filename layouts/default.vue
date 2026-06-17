@@ -84,6 +84,7 @@
 const navItems = [
   { text: '主页', link: '/' },
   { text: '归档', link: '/archives' },
+  { text: '友链', link: '/links' },
 ]
 
 const { data: posts } = await useAsyncData('sidebar-posts', () =>
