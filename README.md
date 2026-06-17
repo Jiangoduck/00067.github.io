@@ -1,34 +1,75 @@
-# 00067 的博客
+# Nuxt Minimal Starter
 
-个人博客，基于 [Hexo](https://hexo.io/) 构建，部署在 GitHub Pages。
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 地址
+## Setup
 
-<https://jiang00067.top>
-
-## 本地开发
+Make sure to install dependencies:
 
 ```bash
-# 安装依赖
+# npm
 npm install
 
-# 启动本地服务器
-hexo server
+# pnpm
+pnpm install
 
-# 生成静态文件
-hexo generate
+# yarn
+yarn install
 
-# 部署到 GitHub Pages
-hexo deploy
+# bun
+bun install
 ```
 
-## 目录结构
+## Development Server
 
-- `source/` - 文章源文件
-- `themes/` - 主题文件
-- `public/` - 生成的静态文件（部署用）
+Start the development server on `http://localhost:3000`:
 
-## 技术栈
+```bash
+# npm
+npm run dev
 
-- [Hexo](https://hexo.io/) - 静态博客框架
-- GitHub Pages - 托管部署
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
