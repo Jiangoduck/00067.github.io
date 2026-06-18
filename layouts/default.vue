@@ -17,16 +17,7 @@
               <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
             </nav>
-            <nav id="sub-nav">
-              <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-            </nav>
-            <div id="search-form-wrap">
-              <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-                <input type="search" name="q" class="search-form-input" placeholder="搜索">
-                <button type="submit" class="search-form-submit">&#xF002;</button>
-                <input type="hidden" name="sitesearch" value="https://jiangoduck.github.io">
-              </form>
-            </div>
+
           </div>
         </div>
       </header>
