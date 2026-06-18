@@ -12,6 +12,7 @@
 <script setup>
 const links = [
   { name: '待添加', url: '#', desc: '暂无友链' },
+  { name: 'f00001111的学习记录', url: 'https://mcsog.top/', desc: '记录学习过程' },
 ]
 </script>
 
