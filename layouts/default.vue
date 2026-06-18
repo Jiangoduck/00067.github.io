@@ -129,7 +129,7 @@ useHead({
   ],
   link: [
     { rel: 'alternate', href: '/atom.xml', title: '00067的博客', type: 'application/atom+xml' },
-    { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: 'icon', href: '/favicon.png', type: 'image/png' },
     { rel: 'stylesheet', href: '/css/style.css' },
     { rel: 'stylesheet', href: '/fancybox/jquery.fancybox.min.css' },
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css' }
