@@ -18,7 +18,6 @@
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
             </nav>
             <nav id="sub-nav">
-              <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
               <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
             </nav>
             <div id="search-form-wrap">
@@ -128,7 +127,6 @@ useHead({
     { name: 'twitter:card', content: 'summary' }
   ],
   link: [
-    { rel: 'alternate', href: '/atom.xml', title: '00067的博客', type: 'application/atom+xml' },
     { rel: 'icon', href: '/favicon.png', type: 'image/png' },
     { rel: 'stylesheet', href: '/css/style.css' },
     { rel: 'stylesheet', href: '/fancybox/jquery.fancybox.min.css' },
