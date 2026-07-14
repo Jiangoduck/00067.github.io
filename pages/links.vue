@@ -42,7 +42,7 @@ const links = [
     name: 'f00001111的学习记录',
     url: 'https://mcsog.top/',
     desc: '记录学习过程',
-    avatar: ''
+    avatar: 'https://mcsog.top/images/logo.png'
   },
 ]
 </script>
