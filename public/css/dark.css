@@ -11,11 +11,17 @@ html.dark-mode a:hover {
 html.dark-mode #container {
   background: #0d1117;
 }
+html.dark-mode #header {
+  border-bottom-color: #30363d;
+}
 html.dark-mode #header-outer {
-  background: #161b22;
+  background: transparent;
 }
 html.dark-mode #header-inner {
-  background: #161b22;
+  background: transparent;
+}
+html.dark-mode #banner {
+  opacity: 0.5;
 }
 html.dark-mode #nav a {
   color: #e6edf3;
@@ -29,8 +35,14 @@ html.dark-mode #nav .main-nav-link {
 html.dark-mode #nav .main-nav-link:hover {
   color: #58a6ff;
 }
+html.dark-mode #logo,
+html.dark-mode #subtitle {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
 html.dark-mode .article-inner {
   background: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: none;
 }
 html.dark-mode .article-title {
   color: #e6edf3;
@@ -60,6 +72,13 @@ html.dark-mode .article-entry blockquote {
   border-left-color: #30363d;
   color: #8b949e;
 }
+html.dark-mode .article-entry hr,
+html.dark-mode .widget hr {
+  border-color: #30363d;
+}
+html.dark-mode .article-entry .caption {
+  color: #8b949e;
+}
 html.dark-mode .article-meta {
   color: #8b949e;
 }
@@ -78,27 +97,54 @@ html.dark-mode .article-footer a {
 html.dark-mode .article-footer a:hover {
   color: #58a6ff;
 }
-html.dark-mode #sidebar .widget-wrap {
-  background: #161b22;
+html.dark-mode .article-more-link a {
+  background: #1c2128;
+  color: #8b949e;
+  text-shadow: none;
 }
-html.dark-mode #sidebar .widget-title {
+html.dark-mode .article-more-link a:hover {
+  background: #58a6ff;
+  color: #fff;
+  text-shadow: none;
+}
+html.dark-mode .article-category {
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .article-nav-link-wrap {
+  text-shadow: none;
+  color: #8b949e;
+}
+html.dark-mode .article-nav-link-wrap:hover {
+  color: #58a6ff;
+}
+html.dark-mode .article-nav-caption {
+  color: #30363d;
+}
+html.dark-mode #sidebar .widget-wrap {
+  background: transparent;
+}
+html.dark-mode .widget-title {
   color: #e6edf3;
+  text-shadow: none;
   border-bottom-color: #30363d;
 }
-html.dark-mode #sidebar .widget {
+html.dark-mode .widget {
+  background: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: none;
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .widget a {
   color: #8b949e;
 }
-html.dark-mode #sidebar .widget a {
-  color: #8b949e;
-}
-html.dark-mode #sidebar .widget a:hover {
+html.dark-mode .widget a:hover {
   color: #58a6ff;
+  text-decoration: none;
 }
-html.dark-mode #sidebar .archive-list-link {
+html.dark-mode .widget ul li {
   color: #8b949e;
-}
-html.dark-mode #sidebar .archive-list-link:hover {
-  color: #58a6ff;
 }
 html.dark-mode #footer {
   color: #8b949e;
@@ -109,11 +155,20 @@ html.dark-mode #footer a {
 html.dark-mode #footer a:hover {
   color: #58a6ff;
 }
+html.dark-mode #footer-info {
+  color: #8b949e;
+}
 html.dark-mode .archives-wrap {
-  background: #161b22;
+  margin: 50px 0;
 }
 html.dark-mode .archive-year {
-  color: #58a6ff;
+  color: #e6edf3;
+  text-shadow: none;
+}
+html.dark-mode .archive-article-inner {
+  background: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: none;
 }
 html.dark-mode .archive-article-title {
   color: #e6edf3;
@@ -122,6 +177,9 @@ html.dark-mode .archive-article-title:hover {
   color: #58a6ff;
 }
 html.dark-mode .archive-article-date {
+  color: #8b949e;
+}
+html.dark-mode .archive-article-footer {
   color: #8b949e;
 }
 html.dark-mode .links-page {
@@ -148,12 +206,10 @@ html.dark-mode .links-contact {
 html.dark-mode .links-contact-text {
   color: #8b949e;
 }
-html.dark-mode #banner {
-  opacity: 0.6;
-}
 html.dark-mode .article-share-box {
   background: #161b22;
   border: 1px solid #30363d;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.4);
 }
 html.dark-mode .article-share-input {
   background: #0d1117;
@@ -193,6 +249,17 @@ html.dark-mode .mobile-nav-link {
 html.dark-mode .mobile-nav-link:hover {
   color: #58a6ff;
 }
-html.dark-mode #footer-info {
-  color: #8b949e;
+html.dark-mode #comments {
+  background: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: none;
+}
+html.dark-mode #comments a {
+  color: #58a6ff;
+}
+html.dark-mode .article-nav-link-wrap .article-nav-caption {
+  color: #30363d;
+}
+html.dark-mode #article-nav .article-nav-link-wrap {
+  text-shadow: none;
 }
