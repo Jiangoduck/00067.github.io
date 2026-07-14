@@ -16,6 +16,9 @@
             <nav id="main-nav">
               <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
+              <a class="main-nav-link dark-toggle" href="#" @click.prevent="toggleDark" title="切换暗色模式">
+                <span class="fa" :class="isDark ? 'fa-sun-o' : 'fa-moon-o'"></span>
+              </a>
             </nav>
 
           </div>
@@ -63,6 +66,10 @@
 
     <nav id="mobile-nav">
       <a class="mobile-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
+      <a class="mobile-nav-link dark-toggle" href="#" @click.prevent="toggleDark">
+        <span class="fa" :class="isDark ? 'fa-sun-o' : 'fa-moon-o'"></span>
+        {{ isDark ? '亮色模式' : '暗色模式' }}
+      </a>
     </nav>
 
     <script src="/js/jquery-3.6.4.min.js"></script>
@@ -72,6 +79,44 @@
 </template>
 
 <script setup>
+const isDark = ref(false)
+
+function applyDark(val) {
+  isDark.value = val
+  document.documentElement.classList.toggle('dark-mode', val)
+  try {
+    localStorage.setItem('dark-mode', val ? '1' : '0')
+  } catch (e) {}
+}
+
+function toggleDark() {
+  applyDark(!isDark.value)
+}
+
+function initDark() {
+  let dark = false
+  try {
+    const saved = localStorage.getItem('dark-mode')
+    if (saved !== null) {
+      dark = saved === '1'
+    } else {
+      dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+  } catch (e) {
+    dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  applyDark(dark)
+}
+
+if (import.meta.client) {
+  initDark()
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (localStorage.getItem('dark-mode') === null) {
+      applyDark(e.matches)
+    }
+  })
+}
+
 const navItems = [
   { text: '主页', link: '/' },
   { text: '归档', link: '/archives' },
@@ -121,6 +166,7 @@ useHead({
   link: [
     { rel: 'icon', href: '/favicon.png', type: 'image/png' },
     { rel: 'stylesheet', href: '/css/style.css' },
+    { rel: 'stylesheet', href: '/css/dark.css' },
     { rel: 'stylesheet', href: '/fancybox/jquery.fancybox.min.css' },
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css' }
   ],

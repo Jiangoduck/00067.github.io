@@ -1,0 +1,198 @@
+html.dark-mode body {
+  background: #0d1117;
+  color: #e6edf3;
+}
+html.dark-mode a {
+  color: #58a6ff;
+}
+html.dark-mode a:hover {
+  color: #1f6feb;
+}
+html.dark-mode #container {
+  background: #0d1117;
+}
+html.dark-mode #header-outer {
+  background: #161b22;
+}
+html.dark-mode #header-inner {
+  background: #161b22;
+}
+html.dark-mode #nav a {
+  color: #e6edf3;
+}
+html.dark-mode #nav a:hover {
+  color: #58a6ff;
+}
+html.dark-mode #nav .main-nav-link {
+  color: #8b949e;
+}
+html.dark-mode #nav .main-nav-link:hover {
+  color: #58a6ff;
+}
+html.dark-mode .article-inner {
+  background: #161b22;
+}
+html.dark-mode .article-title {
+  color: #e6edf3;
+}
+html.dark-mode .article-title:hover {
+  color: #58a6ff;
+}
+html.dark-mode .article-entry {
+  color: #e6edf3;
+}
+html.dark-mode .article-entry a {
+  color: #58a6ff;
+}
+html.dark-mode .article-entry a:hover {
+  color: #1f6feb;
+}
+html.dark-mode .article-entry pre,
+html.dark-mode .article-entry .highlight {
+  background: #1c2128;
+  border: 1px solid #30363d;
+}
+html.dark-mode .article-entry code {
+  background: #1c2128;
+  color: #e6edf3;
+}
+html.dark-mode .article-entry blockquote {
+  border-left-color: #30363d;
+  color: #8b949e;
+}
+html.dark-mode .article-meta {
+  color: #8b949e;
+}
+html.dark-mode .article-date {
+  color: #8b949e;
+}
+html.dark-mode .article-date:hover {
+  color: #58a6ff;
+}
+html.dark-mode .article-footer {
+  border-top: 1px solid #30363d;
+}
+html.dark-mode .article-footer a {
+  color: #8b949e;
+}
+html.dark-mode .article-footer a:hover {
+  color: #58a6ff;
+}
+html.dark-mode #sidebar .widget-wrap {
+  background: #161b22;
+}
+html.dark-mode #sidebar .widget-title {
+  color: #e6edf3;
+  border-bottom-color: #30363d;
+}
+html.dark-mode #sidebar .widget {
+  color: #8b949e;
+}
+html.dark-mode #sidebar .widget a {
+  color: #8b949e;
+}
+html.dark-mode #sidebar .widget a:hover {
+  color: #58a6ff;
+}
+html.dark-mode #sidebar .archive-list-link {
+  color: #8b949e;
+}
+html.dark-mode #sidebar .archive-list-link:hover {
+  color: #58a6ff;
+}
+html.dark-mode #footer {
+  color: #8b949e;
+}
+html.dark-mode #footer a {
+  color: #8b949e;
+}
+html.dark-mode #footer a:hover {
+  color: #58a6ff;
+}
+html.dark-mode .archives-wrap {
+  background: #161b22;
+}
+html.dark-mode .archive-year {
+  color: #58a6ff;
+}
+html.dark-mode .archive-article-title {
+  color: #e6edf3;
+}
+html.dark-mode .archive-article-title:hover {
+  color: #58a6ff;
+}
+html.dark-mode .archive-article-date {
+  color: #8b949e;
+}
+html.dark-mode .links-page {
+  background: #0d1117;
+}
+html.dark-mode .link-card {
+  background: #161b22;
+  border-color: #30363d;
+}
+html.dark-mode .link-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+html.dark-mode .link-name {
+  color: #e6edf3;
+}
+html.dark-mode .link-desc {
+  color: #8b949e;
+}
+html.dark-mode .links-contact {
+  background: #1c2128;
+  border-color: #30363d;
+}
+html.dark-mode .links-contact-text {
+  color: #8b949e;
+}
+html.dark-mode #banner {
+  opacity: 0.6;
+}
+html.dark-mode .article-share-box {
+  background: #161b22;
+  border: 1px solid #30363d;
+}
+html.dark-mode .article-share-input {
+  background: #0d1117;
+  color: #e6edf3;
+  border-color: #30363d;
+}
+html.dark-mode .article-share-links {
+  background: #1c2128;
+}
+html.dark-mode .article-share-twitter,
+html.dark-mode .article-share-facebook,
+html.dark-mode .article-share-pinterest,
+html.dark-mode .article-share-linkedin {
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .search-form {
+  background: #161b22;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+html.dark-mode .search-form-input {
+  color: #e6edf3;
+}
+html.dark-mode .search-form-submit {
+  color: #8b949e;
+}
+html.dark-mode .search-form-submit:hover {
+  color: #58a6ff;
+}
+html.dark-mode #mobile-nav {
+  background: #161b22;
+}
+html.dark-mode .mobile-nav-link {
+  color: #e6edf3;
+  border-bottom-color: #30363d;
+}
+html.dark-mode .mobile-nav-link:hover {
+  color: #58a6ff;
+}
+html.dark-mode #footer-info {
+  color: #8b949e;
+}
