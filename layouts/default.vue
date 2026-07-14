@@ -54,6 +54,7 @@
         <div class="outer">
           <div id="footer-info" class="inner">
             &copy; 2026 Jiang00067<br>
+            <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span><br>
             Powered by <a href="https://nuxt.com/" target="_blank">Nuxt</a>
           </div>
         </div>
@@ -122,6 +123,9 @@ useHead({
     { rel: 'stylesheet', href: '/css/style.css' },
     { rel: 'stylesheet', href: '/fancybox/jquery.fancybox.min.css' },
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css' }
+  ],
+  script: [
+    { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: true }
   ]
 })
 </script>
