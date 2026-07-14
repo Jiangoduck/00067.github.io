@@ -22,7 +22,7 @@
           <span class="fa fa-share">分享</span>
         </a>
         <span id="busuanzi_container_page_pv" style="margin-left: 15px;">
-          <span class="fa fa-eye"></span> 阅读量 <span id="busuanzi_value_page_pv"></span> 次
+          <span class="fa fa-eye"></span> 阅读量 <span id="busuanzi_value_page_pv">0</span> 次
         </span>
       </footer>
     </div>
