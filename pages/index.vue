@@ -2,7 +2,7 @@
   <div>
     <div class="profile-card">
       <div class="profile-avatar">
-        <img src="https://avatars.githubusercontent.com/u/198399620?v=4" alt="avatar" class="avatar-img">
+        <img src="https://avatars.githubusercontent.com/Jiangoduck" alt="avatar" class="avatar-img">
       </div>
       <div class="profile-info">
         <div class="profile-name">Jiangoduck</div>
@@ -105,6 +105,7 @@ useHead({
   height: 80px;
   border-radius: 50%;
   overflow: hidden;
+  background: #f0d9e6;
 }
 
 .avatar-img {
