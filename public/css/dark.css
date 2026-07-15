@@ -1,18 +1,30 @@
+/* ===== 暗色模式 ===== */
+html.dark-mode {
+  color-scheme: dark;
+}
+
+/* 基础 */
 html.dark-mode body {
   background: #0d1117;
-  color: #e6edf3;
+  color: #c9d1d9;
 }
+
+/* 链接 */
 html.dark-mode a {
   color: #58a6ff;
 }
 html.dark-mode a:hover {
-  color: #1f6feb;
+  color: #79c0ff;
 }
+
+/* 容器 */
 html.dark-mode #container {
   background: #0d1117;
 }
+
+/* ===== 顶部横幅 ===== */
 html.dark-mode #header {
-  border-bottom-color: #30363d;
+  border-bottom-color: #21262d;
 }
 html.dark-mode #header-outer {
   background: transparent;
@@ -21,10 +33,16 @@ html.dark-mode #header-inner {
   background: transparent;
 }
 html.dark-mode #banner {
-  opacity: 0.5;
+  opacity: 0.4;
 }
+html.dark-mode #logo,
+html.dark-mode #subtitle {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+/* ===== 导航栏 ===== */
 html.dark-mode #nav a {
-  color: #e6edf3;
+  color: #c9d1d9;
 }
 html.dark-mode #nav a:hover {
   color: #58a6ff;
@@ -35,49 +53,18 @@ html.dark-mode #nav .main-nav-link {
 html.dark-mode #nav .main-nav-link:hover {
   color: #58a6ff;
 }
-html.dark-mode #logo,
-html.dark-mode #subtitle {
-  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-}
+
+/* ===== 文章 ===== */
 html.dark-mode .article-inner {
   background: #161b22;
-  border: 1px solid #30363d;
+  border: 1px solid #21262d;
   box-shadow: none;
 }
 html.dark-mode .article-title {
-  color: #e6edf3;
+  color: #c9d1d9;
 }
 html.dark-mode .article-title:hover {
   color: #58a6ff;
-}
-html.dark-mode .article-entry {
-  color: #e6edf3;
-}
-html.dark-mode .article-entry a {
-  color: #58a6ff;
-}
-html.dark-mode .article-entry a:hover {
-  color: #1f6feb;
-}
-html.dark-mode .article-entry pre,
-html.dark-mode .article-entry .highlight {
-  background: #1c2128;
-  border: 1px solid #30363d;
-}
-html.dark-mode .article-entry code {
-  background: #1c2128;
-  color: #e6edf3;
-}
-html.dark-mode .article-entry blockquote {
-  border-left-color: #30363d;
-  color: #8b949e;
-}
-html.dark-mode .article-entry hr,
-html.dark-mode .widget hr {
-  border-color: #30363d;
-}
-html.dark-mode .article-entry .caption {
-  color: #8b949e;
 }
 html.dark-mode .article-meta {
   color: #8b949e;
@@ -88,8 +75,154 @@ html.dark-mode .article-date {
 html.dark-mode .article-date:hover {
   color: #58a6ff;
 }
+html.dark-mode .article-category {
+  color: #484f58;
+  text-shadow: none;
+}
+
+/* 文章正文 */
+html.dark-mode .article-entry {
+  color: #c9d1d9;
+}
+html.dark-mode .article-entry a {
+  color: #58a6ff;
+}
+html.dark-mode .article-entry a:hover {
+  color: #79c0ff;
+}
+html.dark-mode .article-entry blockquote {
+  border-left-color: #21262d;
+  color: #8b949e;
+}
+html.dark-mode .article-entry hr {
+  border-color: #21262d;
+}
+html.dark-mode .article-entry .caption {
+  color: #8b949e;
+}
+html.dark-mode .article-entry strong {
+  color: #c9d1d9;
+}
+
+/* 文章代码 */
+html.dark-mode .article-entry code {
+  background: #1c2128;
+  color: #f0f6fc;
+  text-shadow: none;
+}
+html.dark-mode .article-entry pre {
+  background: #1c2128;
+  border-color: #21262d;
+}
+html.dark-mode .article-entry pre code {
+  background: none;
+  color: #e6edf3;
+  text-shadow: none;
+}
+html.dark-mode .article-entry .highlight {
+  background: #1c2128;
+  border-color: #21262d;
+}
+html.dark-mode .article-entry .highlight .gutter pre {
+  color: #484f58;
+}
+html.dark-mode .article-entry .highlight figcaption {
+  color: #8b949e;
+}
+html.dark-mode .article-entry .highlight .line.marked {
+  background: #21262d;
+}
+
+/* 代码语法高亮 - 适配暗色 */
+html.dark-mode pre .comment,
+html.dark-mode pre .title {
+  color: #8b949e;
+}
+html.dark-mode pre .variable,
+html.dark-mode pre .attribute,
+html.dark-mode pre .tag,
+html.dark-mode pre .regexp,
+html.dark-mode pre .ruby .constant,
+html.dark-mode pre .xml .tag .title,
+html.dark-mode pre .xml .pi,
+html.dark-mode pre .xml .doctype,
+html.dark-mode pre .html .doctype,
+html.dark-mode pre .css .id,
+html.dark-mode pre .css .class,
+html.dark-mode pre .css .pseudo {
+  color: #ff7b72;
+}
+html.dark-mode pre .number,
+html.dark-mode pre .preprocessor,
+html.dark-mode pre .built_in,
+html.dark-mode pre .literal,
+html.dark-mode pre .params,
+html.dark-mode pre .constant {
+  color: #ffa657;
+}
+html.dark-mode pre .class,
+html.dark-mode pre .ruby .class .title,
+html.dark-mode pre .css .rules .attribute {
+  color: #7ee787;
+}
+html.dark-mode pre .string,
+html.dark-mode pre .value,
+html.dark-mode pre .inheritance,
+html.dark-mode pre .header,
+html.dark-mode pre .ruby .symbol,
+html.dark-mode pre .xml .cdata {
+  color: #7ee787;
+}
+html.dark-mode pre .css .hexcolor {
+  color: #39c5cf;
+}
+html.dark-mode pre .function,
+html.dark-mode pre .python .decorator,
+html.dark-mode pre .python .title,
+html.dark-mode pre .ruby .function .title,
+html.dark-mode pre .ruby .title .keyword,
+html.dark-mode pre .perl .sub,
+html.dark-mode pre .javascript .title,
+html.dark-mode pre .coffeescript .title {
+  color: #79c0ff;
+}
+html.dark-mode pre .keyword,
+html.dark-mode pre .javascript .function {
+  color: #d2a8ff;
+}
+
+/* Gist 内嵌 */
+html.dark-mode .article-entry .gist {
+  background: #1c2128;
+  border-color: #21262d;
+}
+html.dark-mode .article-entry .gist .gist-file .gist-data .line-numbers {
+  color: #484f58;
+}
+html.dark-mode .article-entry .gist .gist-file .gist-meta {
+  background: #1c2128;
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .article-entry .gist .gist-file .gist-meta a {
+  color: #58a6ff;
+}
+
+/* 文章更多链接 */
+html.dark-mode .article-more-link a {
+  background: #21262d;
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .article-more-link a:hover {
+  background: #1f6feb;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* 文章页脚 */
 html.dark-mode .article-footer {
-  border-top: 1px solid #30363d;
+  border-top: 1px solid #21262d;
 }
 html.dark-mode .article-footer a {
   color: #8b949e;
@@ -97,20 +230,8 @@ html.dark-mode .article-footer a {
 html.dark-mode .article-footer a:hover {
   color: #58a6ff;
 }
-html.dark-mode .article-more-link a {
-  background: #1c2128;
-  color: #8b949e;
-  text-shadow: none;
-}
-html.dark-mode .article-more-link a:hover {
-  background: #58a6ff;
-  color: #fff;
-  text-shadow: none;
-}
-html.dark-mode .article-category {
-  color: #8b949e;
-  text-shadow: none;
-}
+
+/* 文章导航 */
 html.dark-mode .article-nav-link-wrap {
   text-shadow: none;
   color: #8b949e;
@@ -121,99 +242,16 @@ html.dark-mode .article-nav-link-wrap:hover {
 html.dark-mode .article-nav-caption {
   color: #30363d;
 }
-html.dark-mode #sidebar .widget-wrap {
-  background: transparent;
-}
-html.dark-mode .widget-title {
-  color: #e6edf3;
-  text-shadow: none;
-  border-bottom-color: #30363d;
-}
-html.dark-mode .widget {
-  background: #161b22;
-  border: 1px solid #30363d;
-  box-shadow: none;
-  color: #8b949e;
-  text-shadow: none;
-}
-html.dark-mode .widget a {
-  color: #8b949e;
-}
-html.dark-mode .widget a:hover {
-  color: #58a6ff;
-  text-decoration: none;
-}
-html.dark-mode .widget ul li {
-  color: #8b949e;
-}
-html.dark-mode #footer {
-  color: #8b949e;
-}
-html.dark-mode #footer a {
-  color: #8b949e;
-}
-html.dark-mode #footer a:hover {
-  color: #58a6ff;
-}
-html.dark-mode #footer-info {
-  color: #8b949e;
-}
-html.dark-mode .archives-wrap {
-  margin: 50px 0;
-}
-html.dark-mode .archive-year {
-  color: #e6edf3;
-  text-shadow: none;
-}
-html.dark-mode .archive-article-inner {
-  background: #161b22;
-  border: 1px solid #30363d;
-  box-shadow: none;
-}
-html.dark-mode .archive-article-title {
-  color: #e6edf3;
-}
-html.dark-mode .archive-article-title:hover {
-  color: #58a6ff;
-}
-html.dark-mode .archive-article-date {
-  color: #8b949e;
-}
-html.dark-mode .archive-article-footer {
-  color: #8b949e;
-}
-html.dark-mode .links-page {
-  background: #0d1117;
-}
-html.dark-mode .link-card {
-  background: #161b22;
-  border-color: #30363d;
-}
-html.dark-mode .link-card:hover {
-  border-color: #58a6ff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-html.dark-mode .link-name {
-  color: #e6edf3;
-}
-html.dark-mode .link-desc {
-  color: #8b949e;
-}
-html.dark-mode .links-contact {
-  background: #1c2128;
-  border-color: #30363d;
-}
-html.dark-mode .links-contact-text {
-  color: #8b949e;
-}
+
+/* ===== 分享框 ===== */
 html.dark-mode .article-share-box {
   background: #161b22;
   border: 1px solid #30363d;
-  box-shadow: 1px 2px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 html.dark-mode .article-share-input {
   background: #0d1117;
-  color: #e6edf3;
+  color: #c9d1d9;
   border-color: #30363d;
 }
 html.dark-mode .article-share-links {
@@ -226,12 +264,113 @@ html.dark-mode .article-share-linkedin {
   color: #8b949e;
   text-shadow: none;
 }
+
+/* ===== 分页 ===== */
+html.dark-mode #page-nav {
+  background: #161b22;
+  border: 1px solid #21262d;
+  box-shadow: none;
+  color: #8b949e;
+}
+html.dark-mode #page-nav a {
+  color: #8b949e;
+}
+html.dark-mode #page-nav a:hover {
+  background: #21262d;
+  color: #c9d1d9;
+}
+html.dark-mode #page-nav .current {
+  color: #c9d1d9;
+}
+html.dark-mode #page-nav .space {
+  color: #30363d;
+}
+
+/* ===== 侧栏 ===== */
+html.dark-mode #sidebar .widget-wrap {
+  margin: 40px 0;
+}
+html.dark-mode .widget-title {
+  color: #c9d1d9;
+  text-shadow: none;
+  margin-bottom: 0.8em;
+}
+html.dark-mode .widget {
+  background: #161b22;
+  border: 1px solid #21262d;
+  box-shadow: none;
+  color: #8b949e;
+  text-shadow: none;
+}
+html.dark-mode .widget a {
+  color: #8b949e;
+}
+html.dark-mode .widget a:hover {
+  color: #58a6ff;
+  text-decoration: none;
+}
+html.dark-mode .category-list-count,
+html.dark-mode .tag-list-count,
+html.dark-mode .archive-list-count {
+  color: #484f58;
+}
+
+/* ===== 归档页 ===== */
+html.dark-mode .archive-year {
+  color: #c9d1d9;
+  text-shadow: none;
+}
+html.dark-mode .archive-article-inner {
+  background: #161b22;
+  border: 1px solid #21262d;
+  box-shadow: none;
+}
+html.dark-mode .archive-article-title {
+  color: #c9d1d9;
+}
+html.dark-mode .archive-article-title:hover {
+  color: #58a6ff;
+}
+html.dark-mode .archive-article-date {
+  color: #8b949e;
+}
+
+/* ===== 友链页 ===== */
+html.dark-mode .links-page {
+  background: #0d1117;
+}
+html.dark-mode .link-card {
+  background: #161b22;
+  border-color: #21262d;
+}
+html.dark-mode .link-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+html.dark-mode .link-name {
+  color: #c9d1d9;
+}
+html.dark-mode .link-desc {
+  color: #8b949e;
+}
+html.dark-mode .links-contact {
+  background: #161b22;
+  border-color: #21262d;
+}
+html.dark-mode .links-contact-text {
+  color: #8b949e;
+}
+html.dark-mode .links-contact-text a {
+  color: #58a6ff;
+}
+
+/* ===== 搜索框 ===== */
 html.dark-mode .search-form {
   background: #161b22;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 html.dark-mode .search-form-input {
-  color: #e6edf3;
+  color: #c9d1d9;
 }
 html.dark-mode .search-form-submit {
   color: #8b949e;
@@ -239,27 +378,47 @@ html.dark-mode .search-form-submit {
 html.dark-mode .search-form-submit:hover {
   color: #58a6ff;
 }
+
+/* ===== 移动端菜单 ===== */
 html.dark-mode #mobile-nav {
   background: #161b22;
+  border-right-color: #21262d;
 }
 html.dark-mode .mobile-nav-link {
-  color: #e6edf3;
-  border-bottom-color: #30363d;
+  color: #c9d1d9;
+  border-bottom-color: #21262d;
 }
 html.dark-mode .mobile-nav-link:hover {
   color: #58a6ff;
 }
+
+/* ===== 页脚 ===== */
+html.dark-mode #footer {
+  border-top-color: #21262d;
+  color: #8b949e;
+}
+html.dark-mode #footer a {
+  color: #8b949e;
+}
+html.dark-mode #footer a:hover {
+  color: #58a6ff;
+}
+html.dark-mode #footer-info {
+  color: #8b949e;
+}
+
+/* ===== 评论 ===== */
 html.dark-mode #comments {
   background: #161b22;
-  border: 1px solid #30363d;
+  border: 1px solid #21262d;
   box-shadow: none;
 }
 html.dark-mode #comments a {
   color: #58a6ff;
 }
-html.dark-mode .article-nav-link-wrap .article-nav-caption {
-  color: #30363d;
-}
-html.dark-mode #article-nav .article-nav-link-wrap {
-  text-shadow: none;
+
+/* ===== 文章导航分隔点 ===== */
+html.dark-mode #article-nav:before {
+  background: #21262d;
+  box-shadow: none;
 }
