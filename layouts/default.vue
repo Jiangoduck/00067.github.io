@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <div id="wrap">
+    <div id="wrap" @click="closeMobileNav">
       <header id="header">
         <div id="banner"></div>
         <div id="header-outer" class="outer">
@@ -14,7 +14,7 @@
           </div>
           <div id="header-inner" class="inner">
             <nav id="main-nav">
-              <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+              <a id="main-nav-toggle" class="nav-icon" @click="toggleMobileNav"><span class="fa fa-bars"></span></a>
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
               <a class="main-nav-link dark-toggle" href="#" @click.prevent="toggleDark" title="切换暗色模式">
                 <span class="fa" :class="darkEnabled ? 'fa-sun-o' : 'fa-moon-o'"></span>
@@ -125,6 +125,14 @@ if (import.meta.client) {
       }
     })
   })
+}
+
+function toggleMobileNav() {
+  document.getElementById('container')?.classList.toggle('mobile-nav-on')
+}
+
+function closeMobileNav() {
+  document.getElementById('container')?.classList.remove('mobile-nav-on')
 }
 
 const navItems = [
