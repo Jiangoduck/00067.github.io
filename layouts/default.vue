@@ -17,7 +17,7 @@
               <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
               <a class="main-nav-link dark-toggle" href="#" @click.prevent="toggleDark" title="切换暗色模式">
-                <span class="fa" :class="isDark ? 'fa-sun-o' : 'fa-moon-o'"></span>
+                <span class="fa" :class="darkEnabled ? 'fa-sun-o' : 'fa-moon-o'"></span>
               </a>
             </nav>
 
@@ -67,8 +67,8 @@
     <nav id="mobile-nav">
       <a class="mobile-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
       <a class="mobile-nav-link dark-toggle" href="#" @click.prevent="toggleDark">
-        <span class="fa" :class="isDark ? 'fa-sun-o' : 'fa-moon-o'"></span>
-        {{ isDark ? '亮色模式' : '暗色模式' }}
+        <span class="fa" :class="darkEnabled ? 'fa-sun-o' : 'fa-moon-o'"></span>
+        {{ darkEnabled ? '亮色模式' : '暗色模式' }}
       </a>
     </nav>
 
@@ -79,40 +79,47 @@
 </template>
 
 <script setup>
-const isDark = ref(false)
+import { enable as enableDarkMode, disable as disableDarkMode } from 'darkreader'
 
-function applyDark(val) {
-  isDark.value = val
-  document.documentElement.classList.toggle('dark-mode', val)
-  try {
-    localStorage.setItem('dark-mode', val ? '1' : '0')
-  } catch (e) {}
-}
+const DR_CONFIG = { brightness: 100, contrast: 90, sepia: 10 }
+const darkEnabled = ref(false)
 
 function toggleDark() {
-  applyDark(!isDark.value)
+  if (darkEnabled.value) {
+    disableDarkMode()
+    darkEnabled.value = false
+  } else {
+    enableDarkMode(DR_CONFIG)
+    darkEnabled.value = true
+  }
+  try { localStorage.setItem('dark-mode', darkEnabled.value ? '1' : '0') } catch {}
 }
 
 function initDark() {
-  let dark = false
+  let enabled = false
   try {
     const saved = localStorage.getItem('dark-mode')
     if (saved !== null) {
-      dark = saved === '1'
+      enabled = saved === '1'
     } else {
-      dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-  } catch (e) {
-    dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  } catch {
+    enabled = window.matchMedia('(prefers-color-scheme: dark)').matches
   }
-  applyDark(dark)
+  if (enabled) {
+    enableDarkMode(DR_CONFIG)
+    darkEnabled.value = true
+  }
 }
 
 if (import.meta.client) {
   initDark()
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (localStorage.getItem('dark-mode') === null) {
-      applyDark(e.matches)
+      if (e.matches) enableDarkMode(DR_CONFIG)
+      else disableDarkMode()
+      darkEnabled.value = e.matches
     }
   })
 }
@@ -166,12 +173,14 @@ useHead({
   link: [
     { rel: 'icon', href: '/favicon.png', type: 'image/png' },
     { rel: 'stylesheet', href: '/css/style.css' },
-    { rel: 'stylesheet', href: '/css/dark.css' },
     { rel: 'stylesheet', href: '/fancybox/jquery.fancybox.min.css' },
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css' }
   ],
   script: [
     { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async: true }
+  ],
+  noscript: [
+    { children: '您的浏览器已拦截不蒜子统计，请添加白名单以正常显示访问量' }
   ]
 })
 </script>

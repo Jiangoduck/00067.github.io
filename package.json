@@ -10,8 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.16.0",
     "@nuxt/content": "^2.13.0",
+    "darkreader": "^4.9.128",
+    "nuxt": "^3.16.0",
     "vue": "latest",
     "vue-router": "latest"
   }

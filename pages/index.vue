@@ -5,7 +5,7 @@
         <img src="https://avatars.githubusercontent.com/Jiangoduck" alt="avatar" class="avatar-img">
       </div>
       <div class="profile-info">
-        <div class="profile-name">Jiangoduck</div>
+        <div class="profile-name">Jiang00067</div>
         <div class="profile-bio">记录学习（或许吧 可能有一些胡思乱想）</div>
         <div class="profile-links">
           <a href="https://github.com/Jiangoduck" target="_blank" rel="noopener" class="profile-link">
@@ -71,11 +71,11 @@ function formatDate(dateStr) {
 useHead({
   title: '',
   meta: [
-    { name: 'description', content: 'Jiangoduck 的个人博客' },
+    { name: 'description', content: 'Jiang00067 的个人博客' },
     { property: 'og:type', content: 'website' },
     { property: 'og:title', content: '00067的博客' },
     { property: 'og:url', content: 'https://jiangoduck.github.io/' },
-    { property: 'og:description', content: 'Jiangoduck 的个人博客' }
+    { property: 'og:description', content: 'Jiang00067 的个人博客' }
   ]
 })
 </script>
@@ -91,12 +91,6 @@ useHead({
   align-items: center;
   gap: 1.5em;
   box-shadow: 1px 2px 3px #ddd;
-}
-
-:global(.dark-mode) .profile-card {
-  background: #161b22;
-  border-color: #21262d;
-  box-shadow: none;
 }
 
 .profile-avatar {
@@ -126,19 +120,11 @@ useHead({
   margin-bottom: 0.3em;
 }
 
-:global(.dark-mode) .profile-name {
-  color: #c9d1d9;
-}
-
 .profile-bio {
   color: #888;
   font-size: 0.9em;
   margin-bottom: 0.6em;
   line-height: 1.5;
-}
-
-:global(.dark-mode) .profile-bio {
-  color: #8b949e;
 }
 
 .profile-links {
