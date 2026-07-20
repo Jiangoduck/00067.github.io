@@ -79,7 +79,7 @@
 </template>
 
 <script setup>
-import { enable as enableDarkMode, disable as disableDarkMode } from 'darkreader'
+import { enable as enableDarkMode, disable as disableDarkMode, setFetchMethod } from 'darkreader'
 
 const DR_CONFIG = { brightness: 100, contrast: 90, sepia: 10 }
 const darkEnabled = ref(false)
@@ -96,6 +96,7 @@ function toggleDark() {
 }
 
 function initDark() {
+  setFetchMethod(window.fetch)
   let enabled = false
   try {
     const saved = localStorage.getItem('dark-mode')
@@ -114,13 +115,15 @@ function initDark() {
 }
 
 if (import.meta.client) {
-  initDark()
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (localStorage.getItem('dark-mode') === null) {
-      if (e.matches) enableDarkMode(DR_CONFIG)
-      else disableDarkMode()
-      darkEnabled.value = e.matches
-    }
+  onMounted(() => {
+    initDark()
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (localStorage.getItem('dark-mode') === null) {
+        if (e.matches) enableDarkMode(DR_CONFIG)
+        else disableDarkMode()
+        darkEnabled.value = e.matches
+      }
+    })
   })
 }
 
