@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <div id="wrap" @click="closeMobileNav">
+    <div id="wrap">
       <header id="header">
         <div id="banner"></div>
         <div id="header-outer" class="outer">
@@ -14,7 +14,7 @@
           </div>
           <div id="header-inner" class="inner">
             <nav id="main-nav">
-              <a id="main-nav-toggle" class="nav-icon" @click="toggleMobileNav"><span class="fa fa-bars"></span></a>
+              <a id="main-nav-toggle" class="nav-icon" @click.stop="toggleMobileNav"><span class="fa fa-bars"></span></a>
               <a class="main-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
               <a class="main-nav-link dark-toggle" href="#" @click.prevent="toggleDark" title="切换暗色模式">
                 <span class="fa" :class="darkEnabled ? 'fa-sun-o' : 'fa-moon-o'"></span>
@@ -65,12 +65,14 @@
     </div>
 
     <nav id="mobile-nav">
-      <a class="mobile-nav-link" v-for="item in navItems" :key="item.text" :href="item.link">{{ item.text }}</a>
+      <a class="mobile-nav-link" v-for="item in navItems" :key="item.text" :href="item.link" @click="closeMobileNav">{{ item.text }}</a>
       <a class="mobile-nav-link dark-toggle" href="#" @click.prevent="toggleDark">
         <span class="fa" :class="darkEnabled ? 'fa-sun-o' : 'fa-moon-o'"></span>
         {{ darkEnabled ? '亮色模式' : '暗色模式' }}
       </a>
     </nav>
+
+    <div id="mobile-nav-mask" @click="closeMobileNav"></div>
 
     <script src="/js/jquery-3.6.4.min.js"></script>
     <script src="/fancybox/jquery.fancybox.min.js"></script>
