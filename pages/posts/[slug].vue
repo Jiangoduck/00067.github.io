@@ -27,6 +27,7 @@
       </footer>
     </div>
   </article>
+  <AppComment v-if="post" />
 </template>
 
 <script setup>
